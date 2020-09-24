@@ -1,5 +1,9 @@
 set -x
 
+export INSTALL_DIR=/home/pgsql/pgsql-install
+export BIN_DIR=$INSTALL_DIR/bin
+export PATH=$PATH:$BIN_DIR
+
 declare -a strindex=("number of transactions actually processed"
                      "latency average"
                      "including connections establishing"
