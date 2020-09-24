@@ -49,6 +49,6 @@ su pgsql -c "$BIN_DIR/createdb -O pgsql pgbench"
 
 ## Data warmup and RUN tpcb-like select testcases
 su pgsql -c "$BIN_DIR/pgbench -i -s 1000 pgbench"
-wget https://raw.githubusercontent.com/bzhaoopenstack/db-benchmark-suites/master/postgres/pgbench-tpcb-select-full-arrange-test.sh
+su pgsql -c "cd ; wget https://raw.githubusercontent.com/bzhaoopenstack/db-benchmark-suites/master/postgres/pgbench-tpcb-select-full-arrange-test.sh"
 
-su pgsql -s $BASH_CMD ./pgbench-tpcb-select-full-arrange-test.sh
+su pgsql -s $BASH_CMD /home/pgsql/pgbench-tpcb-select-full-arrange-test.sh
